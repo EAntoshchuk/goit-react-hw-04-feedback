@@ -1,0 +1,20 @@
+.btn_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.btn {
+  width: 195px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 20px;
+  background-color: rgb(72, 72, 144);
+  color: rgb(184, 202, 154);
+  transition: color cubic-bezier(0.4, 0, 0.2, 1);
+  animation-duration: 250ms;
+}
+
+.btn:hover {
+  color: #fffd6a;
+}
