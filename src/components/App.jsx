@@ -55,7 +55,7 @@ class App extends Component {
             color: '#b8ca9a',
           }}
         >
-          React-hw-02-feedback
+          React-hw-04-feedback
         </div>
         <div>
           <Section
