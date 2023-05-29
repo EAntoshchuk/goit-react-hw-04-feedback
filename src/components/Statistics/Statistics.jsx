@@ -14,7 +14,9 @@ export default function Statistics({
       <li className={css.stats_item}>Neutral: {neutral}</li>
       <li className={css.stats_item}>Bad: {bad}</li>
       <li className={css.stats_item}>Total: {total}</li>
-      <li>Positive feedback: {positivePersantage}%</li>
+      <li className={css.stats_item}>
+        Positive feedback: {positivePersantage}%
+      </li>
     </ul>
   );
 }
