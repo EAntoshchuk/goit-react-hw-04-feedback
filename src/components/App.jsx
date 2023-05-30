@@ -5,50 +5,39 @@ import Notification from './Notification/Notification';
 import Section from './Section/Section';
 
 export default function App() {
-  // state = {
-  //   good: 0,
-  //   neutral: 0,
-  //   bad: 0,
-  // };
-
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
   const handleIncrement = event => {
-    const { name, value } = event.target;
+    const { name } = event.target;
+    console.log(name);
 
     switch (name) {
       case 'good':
-        setGood(value + 1);
+        setGood(good + 1);
         break;
 
       case 'neutral':
-        setNeutral(value + 1);
+        setNeutral(neutral + 1);
         break;
 
       case 'bad':
-        setBad(value + 1);
+        setBad(bad + 1);
         break;
 
       default:
         return;
     }
-
-    // this.setState(prevState => {
-    //   return { [name]: prevState[name] + 1 };
-    // });
   };
 
   const countTotalFeedback = () => {
     const total = good + neutral + bad;
-    console.log(total);
     return total;
   };
 
   const countPositiveFeedbackPercentage = total => {
     const positivePersantage = Math.round((good / total) * 100);
-    console.log(positivePersantage);
     return positivePersantage;
   };
 
@@ -79,7 +68,7 @@ export default function App() {
       </div>
       <div>
         <Section
-          title="Please leave feedback"
+          title="Leave feedback please"
           children={
             <FeedbackOptions
               options={Object.keys({ good, bad, neutral })}
